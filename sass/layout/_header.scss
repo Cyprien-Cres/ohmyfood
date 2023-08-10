@@ -1,0 +1,57 @@
+header {
+  img {
+    margin: 0 auto;
+    display: flex;
+    height: 63px;
+    padding: 18px 0;
+  }
+
+  div {
+    background-color: $colorbackground;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .location {
+    width: 100%;
+    background-color: $grey2;
+    padding: 20px 0px;
+    font-size: 1rem;
+    p {
+      font-family: $fontmedium;
+      color: $grey;
+    }
+    .fa-solid {
+      padding-right: 15px;
+    }
+  }
+  h1 {
+    @include title;
+  }
+  p {
+    font-family: $fontlight;
+    font-size: 1.125rem;
+    padding: 0 30px;
+  }
+  button {
+    margin-top: 35px;
+    margin-bottom: 60px;
+    background: linear-gradient(to top, #9256dcf1, #FF79DA);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    font-family: $fontmedium;
+    font-size: 1rem;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(to top, #9256dc, #ff79d9);
+      opacity: 85%;
+    }
+  }
+}
