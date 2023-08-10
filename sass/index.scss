@@ -1,4 +1,101 @@
-@import "./settings";
-@import "./layout/header";
-@import "./layout/main";
-@import "./layout/footer";
+main {
+  margin: 0 auto;
+
+  h2 {
+    @include title;
+  }
+
+  .fonctionnement {
+    div {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 20px;
+      p{
+        display: flex;
+        align-items: center;
+        padding: 25px 35px;
+        margin-bottom: 25px;
+        background-color: $colorbackground;
+        border-radius: 20px;
+        font-family: $fontmedium;
+        font-size: 1rem;
+        color: black;
+      }
+      em {
+        position: absolute;
+        background-color: $colorprim;
+        color: white;
+        padding: 7px 9px 5px 6px;
+        border-radius: 50%;
+        transform: translateX(-45px);
+      }
+      .fa-solid {
+        padding-right: 20px;
+        font-size: 1.188rem;
+        color: $grey3;
+        &.fa-store {
+          color: $colorprim;
+        }
+      }
+    }
+  }
+
+  .restaurants {
+    background-color: $colorbackground;
+    padding: 0px 17px 70px 17px;
+    .card {
+      height: 251px;
+      background-color: white;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      .card-img {
+        img {
+          width: 100%;
+          height: 171px;
+          object-fit: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        p {
+          position: absolute;
+          background-color: $green;
+          color: $greenfont;
+          font-family: $fontmedium;
+          font-size: 0.875rem;
+          padding: 7px 12px;
+          border-radius: 3px;
+          transform: translateX(250px) translateY(-162px);
+        }
+      }
+      .card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px 15px 14px;
+        h3 {
+          font-family: $fontbold;
+          font-size: 1.125rem;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+      .card-heart {
+        font-size: 1.313rem;
+        .fa-solid {
+          display: none;
+        }
+        &:active {
+          .fa-solid {
+            display: block;
+          }
+          .fa-regular {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
