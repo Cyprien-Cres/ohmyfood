@@ -17,6 +17,7 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -26,22 +27,32 @@ body {
 
 header img {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 63px;
   padding: 18px 0;
 }
 header div {
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.212);
 }
 header .location {
   width: 100%;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   padding: 20px 0px;
   font-size: 1rem;
 }
@@ -66,8 +77,16 @@ header p {
 header button {
   margin-top: 35px;
   margin-bottom: 60px;
-  background: linear-gradient(to top, #9256dc, #FF79DA);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#9256dc),
+    to(#ff79da)
+  );
+  background: linear-gradient(to top, #9256dc, #ff79da);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   padding: 15px 25px;
   font-family: roboto-medium, sans-serif;
   font-size: 1rem;
@@ -96,7 +115,11 @@ main .fonctionnement div {
   padding-right: 20px;
 }
 main .fonctionnement div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 25px 35px;
   margin-bottom: 25px;
@@ -105,30 +128,35 @@ main .fonctionnement div p {
   font-family: roboto-medium, sans-serif;
   font-size: 1rem;
   color: black;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
 }
 main .fonctionnement div em {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-right: 1px;
   font-size: 14px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   height: 24px;
   width: 24px;
   border-radius: 50%;
   top: 35%;
-  left: 20px;
+  left: 1%;
 }
 main .fonctionnement div .fa-solid {
   padding-right: 20px;
   font-size: 1.188rem;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 main .fonctionnement div .fa-solid.fa-store {
-  color: #9356DC;
+  color: #9356dc;
 }
 main .restaurants {
   background-color: #f6f6f6;
@@ -146,13 +174,14 @@ main .restaurants .card .card-img {
 main .restaurants .card .card-img img {
   width: 100%;
   height: 171px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 main .restaurants .card .card-img p {
   position: absolute;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   font-family: roboto-medium, sans-serif;
   font-size: 0.875rem;
@@ -162,9 +191,18 @@ main .restaurants .card .card-img p {
   right: 3%;
 }
 main .restaurants .card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 15px 25px 15px 14px;
 }
@@ -180,23 +218,28 @@ main .restaurants .card .card-content p {
 main .restaurants .card .card-heart {
   font-size: 1.313rem;
 }
-main .restaurants .card .card-heart .custom-checkbox input[type=checkbox],
+main .restaurants .card .card-heart .custom-checkbox input[type="checkbox"],
 main .restaurants .card .card-heart .custom-checkbox .checked {
   display: none;
 }
-main .restaurants .card .card-heart .custom-checkbox input[type=checkbox]:checked ~ .checked {
+main
+  .restaurants
+  .card
+  .card-heart
+  .custom-checkbox
+  input[type="checkbox"]:checked
+  ~ .checked {
   display: inline-block;
+  background: -webkit-linear-gradient(to top, #9256dc, #ff79da);
 }
-main .restaurants .card .card-heart .custom-checkbox input[type=checkbox]:checked ~ .unchecked {
+main
+  .restaurants
+  .card
+  .card-heart
+  .custom-checkbox
+  input[type="checkbox"]:checked
+  ~ .unchecked {
   display: none;
-}
-main .restaurants .card .card-heart .fa-heart {
-  cursor: pointer;
-}
-main .restaurants .card .card-heart .fa-solid {
-  background: linear-gradient(to top, #9256dc, #FF79DA);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 footer {
@@ -218,6 +261,4 @@ footer nav ul li {
 footer nav ul li .fa-solid {
   margin-right: 12px;
   height: 13px;
-}
-
-/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=main.css.map */
