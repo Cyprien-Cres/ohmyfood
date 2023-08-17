@@ -4,6 +4,12 @@ header {
     display: flex;
     height: 63px;
     padding: 18px 0;
+
+    @media screen and (min-width:768px){
+      width: 200px;
+      height: 96px;
+      padding: 30px 0;
+    }
   }
 
   div {
@@ -14,6 +20,10 @@ header {
     align-items: center;
     text-align: center;
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.212);
+    
+    @media screen and (min-width:768px) {
+      box-shadow: none;
+    }
   }
 
   .location {
@@ -31,6 +41,11 @@ header {
   }
   h1 {
     @include title;
+
+    @media screen and (min-width:768px) {
+      font-size: 2.5rem;
+      padding: 30px 0px 30px 0px;
+    }
   }
   p {
     font-family: $fontlight;
@@ -50,8 +65,14 @@ header {
     border: none;
     cursor: pointer;
 
+    @media screen and (min-width:768px) {
+      margin-bottom: 30px;
+    }
+
     &:hover {
       opacity: 85%;
+      transform: scale(1.01);
+      box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
     }
   }
 }

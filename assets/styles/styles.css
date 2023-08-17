@@ -30,6 +30,13 @@ header img {
   height: 63px;
   padding: 18px 0;
 }
+@media screen and (min-width: 768px) {
+  header img {
+    width: 200px;
+    height: 96px;
+    padding: 30px 0;
+  }
+}
 header div {
   background-color: #f6f6f6;
   display: flex;
@@ -38,6 +45,11 @@ header div {
   align-items: center;
   text-align: center;
   box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.212);
+}
+@media screen and (min-width: 768px) {
+  header div {
+    box-shadow: none;
+  }
 }
 header .location {
   width: 100%;
@@ -58,6 +70,12 @@ header h1 {
   padding-top: 60px;
   padding-bottom: 24px;
 }
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+    padding: 30px 0px 30px 0px;
+  }
+}
 header p {
   font-family: roboto-light, sans-serif;
   font-size: 1.125rem;
@@ -76,8 +94,15 @@ header button {
   border: none;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  header button {
+    margin-bottom: 30px;
+  }
+}
 header button:hover {
   opacity: 85%;
+  transform: scale(1.01);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
 }
 
 main {
@@ -89,11 +114,31 @@ main h2 {
   padding-top: 60px;
   padding-bottom: 24px;
 }
-main .fonctionnement div {
+@media screen and (min-width: 768px) {
+  main h2 {
+    padding-top: 55px;
+  }
+}
+main .fonctionnement {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+@media screen and (min-width: 768px) {
+  main .fonctionnement div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main .fonctionnement div .steps {
   position: relative;
-  width: 100%;
   padding-left: 30px;
   padding-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  main .fonctionnement div .steps {
+    padding-left: 12px;
+    padding-right: 0px;
+  }
 }
 main .fonctionnement div p {
   display: flex;
@@ -106,6 +151,19 @@ main .fonctionnement div p {
   font-size: 1rem;
   color: black;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
+}
+@media screen and (min-width: 768px) {
+  main .fonctionnement div p {
+    padding: 25px 30px 25px 0px;
+    margin-bottom: 55px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 948px) {
+  main .fonctionnement div p {
+    padding: 25px 60px 25px 0px;
+    font-size: 1rem;
+  }
 }
 main .fonctionnement div em {
   position: absolute;
@@ -122,10 +180,21 @@ main .fonctionnement div em {
   top: 35%;
   left: 20px;
 }
+@media screen and (min-width: 768px) {
+  main .fonctionnement div em {
+    top: 18%;
+    left: 0px;
+  }
+}
 main .fonctionnement div .fa-solid {
   padding-right: 20px;
   font-size: 1.188rem;
   color: #7E7E7E;
+}
+@media screen and (min-width: 768px) {
+  main .fonctionnement div .fa-solid {
+    padding: 0px 22px 0px 34px;
+  }
 }
 main .fonctionnement div .fa-solid.fa-store {
   color: #9356DC;
@@ -134,23 +203,48 @@ main .restaurants {
   background-color: #f6f6f6;
   padding: 0px 17px 70px 17px;
 }
-main .restaurants .card {
+@media screen and (min-width: 768px) {
+  main .restaurants {
+    padding-bottom: 30px;
+  }
+}
+main .restaurants h2 {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  main .restaurants h2 {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .restaurants .group-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10%;
+    row-gap: 50px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+main .restaurants .group-card .card {
   height: 251px;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 18px;
 }
-main .restaurants .card .card-img {
+main .restaurants .group-card .card .card-img {
   position: relative;
 }
-main .restaurants .card .card-img img {
+main .restaurants .group-card .card .card-img img {
   width: 100%;
   height: 171px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-main .restaurants .card .card-img p {
+main .restaurants .group-card .card .card-img p {
   position: absolute;
   background-color: #99E2D0;
   color: #008766;
@@ -161,39 +255,39 @@ main .restaurants .card .card-img p {
   top: 5%;
   right: 3%;
 }
-main .restaurants .card .card-content {
+main .restaurants .group-card .card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px 15px 14px;
 }
-main .restaurants .card .card-content h3 {
+main .restaurants .group-card .card .card-content h3 {
   font-family: roboto-bold, sans-serif;
   font-size: 1.125rem;
   margin-bottom: 5px;
 }
-main .restaurants .card .card-content p {
+main .restaurants .group-card .card .card-content p {
   font-size: 1.063rem;
   font-family: roboto-light, sans-serif;
 }
-main .restaurants .card .card-heart {
+main .restaurants .group-card .card .card-heart {
   font-size: 1.313rem;
 }
-main .restaurants .card .card-heart .custom-checkbox input[type=checkbox],
-main .restaurants .card .card-heart .custom-checkbox .checked {
+main .restaurants .group-card .card .card-heart .custom-checkbox input[type=checkbox],
+main .restaurants .group-card .card .card-heart .custom-checkbox .checked {
   display: none;
 }
-main .restaurants .card .card-heart .custom-checkbox input[type=checkbox]:checked ~ .checked {
+main .restaurants .group-card .card .card-heart .custom-checkbox input[type=checkbox]:checked ~ .checked {
   display: inline-block;
 }
-main .restaurants .card .card-heart .custom-checkbox input[type=checkbox]:checked ~ .unchecked {
+main .restaurants .group-card .card .card-heart .custom-checkbox input[type=checkbox]:checked ~ .unchecked {
   display: none;
 }
-main .restaurants .card .card-heart .fa-heart {
+main .restaurants .group-card .card .card-heart .fa-heart {
   cursor: pointer;
 }
-main .restaurants .card .card-heart .fa-solid {
+main .restaurants .group-card .card .card-heart .fa-solid {
   background: linear-gradient(to top, #9256dc, #FF79DA);
   -webkit-background-clip: text;
   color: transparent;
@@ -206,10 +300,36 @@ footer {
   background-color: #353535;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 114px;
+    padding-right: 17px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 948px) {
+  footer {
+    padding-right: 65px;
+    font-size: 1rem;
+  }
+}
 footer img {
   margin-bottom: 16px;
   width: 139px;
   height: 27px;
+}
+@media screen and (min-width: 768px) {
+  footer img {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer nav ul {
+    display: flex;
+  }
 }
 footer nav ul li {
   list-style: none;
@@ -218,6 +338,21 @@ footer nav ul li {
 footer nav ul li .fa-solid {
   margin-right: 12px;
   height: 13px;
+}
+@media screen and (min-width: 768px) {
+  footer nav ul li {
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer nav ul li:nth-child(2) {
+    margin-right: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer nav ul li:nth-child(4) {
+    margin-right: 90px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
