@@ -1,0 +1,19 @@
+header {
+  .header-restaurant {
+    display: flex;
+    flex-direction: row;
+    a {
+      .fa-solid {
+        font-size: 1.3rem;
+        padding-left: 24px;
+        width: 17px;
+      }
+    }
+  }
+  .img-restaurant {
+    width: 100%;
+    height: 275px;
+    padding: 0;
+    position: absolute;
+  }
+}

@@ -1,16 +1,33 @@
 main {
   margin: 0 auto;
+  animation: index 3s linear;
 
   h2 {
     @include title;
+    @media screen and (min-width:768px) {
+      padding-top: 55px;
+    }
   }
 
   .fonctionnement {
+    margin: 0 auto;
+    max-width: 1080px;
     div {
-      position: relative;
-      width: 100%;
-      padding-left: 30px;
-      padding-right: 20px;
+      z-index: -1;
+      @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: space-between;
+      }
+      .steps {
+        position: relative;
+        padding-left: 30px;
+        padding-right: 20px;
+
+        @media screen and (min-width:768px) {
+          padding-left: 12px;
+          padding-right: 0px;
+        }
+      }
       p{
         display: flex;
         align-items: center;
@@ -22,6 +39,17 @@ main {
         font-size: 1rem;
         color: black;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
+
+        @media screen and (min-width:768px) {
+          padding: 25px 30px 25px 0px;
+          margin-bottom: 55px;
+          font-size: 0.8rem;
+        }
+
+        @media screen and (min-width:948px) {
+          padding: 25px 60px 25px 0px;
+          font-size: 1rem;
+        }
       }
       em {
         position: absolute;
@@ -37,11 +65,21 @@ main {
         border-radius: 50%;
         top: 35%;
         left: 20px;
+
+        @media screen and (min-width:768px) {
+          top: 18%;
+          left: 0px;
+        }
       }
       .fa-solid {
         padding-right: 20px;
         font-size: 1.188rem;
         color: $grey3;
+
+        @media screen and (min-width:768px) {
+          padding: 0px 22px 0px 34px;
+        }
+
         &.fa-store {
           color: $colorprim;
         }
@@ -52,71 +90,92 @@ main {
   .restaurants {
     background-color: $colorbackground;
     padding: 0px 17px 70px 17px;
-    .card {
-      height: 251px;
-      background-color: white;
-      border-radius: 15px;
-      margin-bottom: 18px;
-      .card-img {
-        position: relative;
-        img {
-          width: 100%;
-          height: 171px;
-          object-fit: cover;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
-        }
-        p {
-          position: absolute;
-          background-color: $green;
-          color: $greenfont;
-          font-family: $fontmedium;
-          font-size: 0.875rem;
-          padding: 7px 12px;
-          border-radius: 3px;
-          top: 5%;
-          right: 3%;
-        }
+    @media screen and (min-width:768px) {
+      padding-bottom: 30px;
+    }
+    h2 {
+      max-width: 1080px;
+      margin: 0 auto;
+      @media screen and (min-width:768px) {
+        padding-top: 30px;
       }
-      .card-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 25px 15px 14px;
-        h3 {
-          font-family: $fontbold;
-          font-size: 1.125rem;
-          margin-bottom: 5px;
-        }
-        p {
-          font-size: 1.063rem;
-          font-family: $fontlight;
-        }
+    }
+    .group-card {
+      @media screen and (min-width:768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 10%;
+        row-gap: 50px;
+        max-width: 1080px;
+        margin: 0 auto;
       }
-      .card-heart {
-        font-size: 1.313rem;
-        .custom-checkbox input[type="checkbox"],
-        .custom-checkbox .checked {
-        display: none;
+      .card {
+        height: 251px;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 18px;
+        .card-img {
+          position: relative;
+          img {
+            width: 100%;
+            height: 171px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
+          p {
+            position: absolute;
+            background-color: $green;
+            color: $greenfont;
+            font-family: $fontmedium;
+            font-size: 0.875rem;
+            padding: 7px 12px;
+            border-radius: 3px;
+            top: 5%;
+            right: 3%;
+          }
         }
-        .custom-checkbox input[type="checkbox"]:checked ~ .checked
-        {  
-          display: inline-block;
-        } 
-        .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
-        {
-          display: none;
+        .card-content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 25px 15px 14px;
+          h3 {
+            font-family: $fontbold;
+            font-size: 1.125rem;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 1.063rem;
+            font-family: $fontlight;
+          }
         }
-
-        .fa-heart {
-          cursor: pointer;
-        }
-
-        .fa-solid {
-          background: linear-gradient(to top, #9256dc, #FF79DA);
-          -webkit-background-clip: text;
-          color: transparent;
+        .card-heart {
+          font-size: 1.313rem;
+          .custom-checkbox input[type="checkbox"],
+          .custom-checkbox .checked {
+            display: none;
+          }
+          .custom-checkbox input[type="checkbox"]:checked ~ .checked
+          {  
+            display: inline-block;
+          } 
+          .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+          {
+            display: none;
+          }
+          
+          .fa-heart {
+            cursor: pointer;
+          }
+          
+          .fa-solid {
+            background: linear-gradient(to top, $colorprim, $colorsecond);
+            -webkit-background-clip: text;
+            color: transparent;
+          }
         }
       }
     }

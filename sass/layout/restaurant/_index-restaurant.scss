@@ -1,0 +1,119 @@
+main {
+  .main-restaurant {
+      position: relative;
+      background-color: $colorbackground;
+      z-index: 1;
+      margin-top: 220px;
+      padding: 30px 0px 40px 13px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+
+      .title {
+      display: flex;
+      justify-content: space-between;
+      font-family: $font-shrikhand;
+      h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+        em {
+          color: $green;
+        }
+      }
+      .card-heart {
+        font-size: 1.313rem;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .custom-checkbox input[type="checkbox"],
+        .custom-checkbox .checked {
+          display: none;
+        }
+        .custom-checkbox input[type="checkbox"]:checked ~ .checked
+        {  
+          display: inline-block;
+        } 
+        .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+        {
+          display: none;
+        }
+        
+        .fa-heart {
+          cursor: pointer;
+        }
+        
+        .fa-solid {
+          background: linear-gradient(to top, $colorprim, $colorsecond);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+    .menu {
+      h2 {
+        font-weight: 400;
+        font-size: 1rem;
+        padding-bottom: 0px;
+      }
+      .underline {
+        height: 3px;
+        width: 40px;
+        margin-top: 6px;
+        background-color: $green;
+      }
+
+      .card-hover {
+          margin-right: 13px;
+          &:hover {
+            margin-right: 0px;
+            padding-right: 1px;
+            border-right: 12px solid $green;
+          }
+        .card-restaurant {
+            font-family: $fontmedium;
+            font-size: 0.95rem;
+            background-color: #FFFFFF;
+            margin-top: 12px;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.137);
+            cursor: pointer;
+            h3 {
+            padding-bottom: 5px;
+            }
+            div {
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.938rem;
+              em {
+                font-weight: 600;
+              }
+            }
+          }
+        } 
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        width: 186px;
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        background: linear-gradient(to top, $colorprim, $colorsecond);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
+        padding: 15px 25px;
+        font-family: $fontmedium;
+        font-size: 1rem;
+        color: white;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+    
+        &:hover {
+          opacity: 85%;
+          transform: scale(1.01);
+          box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
+        }
+      }
+    }
+  }
