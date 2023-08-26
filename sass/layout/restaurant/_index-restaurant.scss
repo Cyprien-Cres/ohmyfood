@@ -4,93 +4,122 @@ main {
       background-color: $colorbackground;
       z-index: 1;
       margin-top: 220px;
-      padding: 30px 0px 40px 13px;
+      padding: 30px 13px 40px 13px;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
 
-      .title {
-      display: flex;
-      justify-content: space-between;
-      font-family: $font-shrikhand;
-      h1 {
-        font-size: 28px;
-        letter-spacing: 2px;
-        em {
-          color: $green;
-        }
-      }
-      .card-heart {
-        font-size: 1.313rem;
-        padding-right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .custom-checkbox input[type="checkbox"],
-        .custom-checkbox .checked {
-          display: none;
-        }
-        .custom-checkbox input[type="checkbox"]:checked ~ .checked
-        {  
-          display: inline-block;
-        } 
-        .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
-        {
-          display: none;
-        }
-        
-        .fa-heart {
-          cursor: pointer;
-        }
-        
-        .fa-solid {
-          background: linear-gradient(to top, $colorprim, $colorsecond);
-          -webkit-background-clip: text;
-          color: transparent;
-        }
-      }
-    }
-    .menu {
-      h2 {
-        font-weight: 400;
-        font-size: 1rem;
-        padding-bottom: 0px;
-      }
-      .underline {
-        height: 3px;
-        width: 40px;
-        margin-top: 6px;
-        background-color: $green;
+      @media screen and (min-width:768px){
+        max-width: 1055px;
+        margin: 328px auto 0px auto;
       }
 
-      .card-hover {
-          margin-right: 13px;
-          &:hover {
-            margin-right: 0px;
-            padding-right: 1px;
-            border-right: 12px solid $green;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-shrikhand;
+
+        @media screen and (min-width:768px){
+          justify-content: center;
+        }
+
+        h1 {
+          font-size: 28px;
+          letter-spacing: 2px;
+
+          @media screen and (min-width:768px){
+            padding-right: 22px;
           }
+
+          em {
+            color: $green;
+          }
+        }
+      }
+      .menu {
+        @media screen and (min-width:768px) {
+          max-width: 634px;
+          margin: 0 auto;
+        }
+
+        h2 {
+          font-weight: 400;
+          font-size: 1rem;
+          padding-bottom: 0px;
+        }
+        .underline {
+          height: 3px;
+          width: 40px;
+          margin-top: 6px;
+          background-color: $green;
+        }
+
         .card-restaurant {
-            font-family: $fontmedium;
-            font-size: 0.95rem;
-            background-color: #FFFFFF;
-            margin-top: 12px;
-            border-radius: 15px;
-            padding: 15px;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.137);
-            cursor: pointer;
-            h3 {
-            padding-bottom: 5px;
-            }
-            div {
-              display: flex;
-              justify-content: space-between;
-              font-size: 0.938rem;
-              em {
-                font-weight: 600;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.137);
+          border-radius: 15px;
+          margin-top: 12px;
+          background-color: $green;
+          display: flex;
+          align-items: center;
+          color: transparent;
+
+          &:hover {
+            animation: checked-font 0.5s ease-in-out forwards;
+          }
+            .card-content {
+              font-family: $fontmedium;
+              font-size: 0.95rem;
+              background-color: #FFFFFF;
+              padding: 15px;
+              border-radius: 15px;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: black;
+              h3 {
+                padding-bottom: 5px;
               }
+              div {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.938rem;
+                p {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+                em {
+                  font-weight: 600;
+                }
+              }
+              &:hover {
+                animation: card-checked 0.5s ease-in-out forwards;
+              }
+          }
+          .card-check {
+            .fa-solid {  
+              font-size: 1.2rem;
+              position: absolute;
+              transform: translate(-40px, -10px);
             }
           }
-        } 
+        }
+        .starters {
+          animation: animation-menu 1s ease-in-out forwards;
+          animation-delay: 0s;
+        }
+        .dishes {
+          opacity: 0;
+          animation: animation-menu 1s ease-in-out forwards;
+          animation-delay: 0.5s;
+        }
+        .desserts {
+          opacity: 0;
+          animation: animation-menu 1s ease-in-out forwards;
+          animation-delay: 1s;
+        }
       }
       button {
         display: flex;
@@ -99,20 +128,9 @@ main {
         margin-top: 40px;
         margin-right: auto;
         margin-left: auto;
-        background: linear-gradient(to top, $colorprim, $colorsecond);
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
-        padding: 15px 25px;
-        font-family: $fontmedium;
-        font-size: 1rem;
-        color: white;
-        border-radius: 30px;
-        border: none;
-        cursor: pointer;
-    
-        &:hover {
-          opacity: 85%;
-          transform: scale(1.01);
-          box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
+
+        @media screen and (min-width:768px){
+          margin-bottom: 0px;
         }
       }
     }

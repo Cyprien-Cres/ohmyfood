@@ -1,7 +1,5 @@
 main {
   margin: 0 auto;
-  animation: index 3s linear;
-
   h2 {
     @include title;
     @media screen and (min-width:768px) {
@@ -150,31 +148,6 @@ main {
           p {
             font-size: 1.063rem;
             font-family: $fontlight;
-          }
-        }
-        .card-heart {
-          font-size: 1.313rem;
-          .custom-checkbox input[type="checkbox"],
-          .custom-checkbox .checked {
-            display: none;
-          }
-          .custom-checkbox input[type="checkbox"]:checked ~ .checked
-          {  
-            display: inline-block;
-          } 
-          .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
-          {
-            display: none;
-          }
-          
-          .fa-heart {
-            cursor: pointer;
-          }
-          
-          .fa-solid {
-            background: linear-gradient(to top, $colorprim, $colorsecond);
-            -webkit-background-clip: text;
-            color: transparent;
           }
         }
       }
