@@ -575,6 +575,7 @@ header .img-restaurant {
   padding: 0;
   position: absolute;
   z-index: -1;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   header .img-restaurant {
