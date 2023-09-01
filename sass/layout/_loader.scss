@@ -1,7 +1,13 @@
 .loader-container {
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: #EAEAEA;
+  transition: opacity 1s, visibility 5s;
+  animation: loading-bg 1s 3s forwards;
   .pan-loader {
     width: 180px;
     height: 180px;

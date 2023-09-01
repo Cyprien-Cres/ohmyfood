@@ -1,5 +1,4 @@
 footer {
-  animation: index 3s linear;
   padding: 25px;
   font-family: $fontregular;
   font-size: 1rem;
@@ -33,6 +32,7 @@ footer {
       }
 
       li {
+        cursor: pointer;
         list-style: none;
         line-height: 26px;
         .fa-solid {

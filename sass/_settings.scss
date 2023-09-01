@@ -124,27 +124,46 @@ $timing: 3s;
   }
 }
 
-@keyframes background-loader {
-  0% {
-    background-color: white;
+@keyframes loading-bg {
+  from {
     opacity: 1;
   }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    background-color: white;
+  to {
     opacity: 0;
+    transform: scale(0);
   }
 }
 
-
-@keyframes index {
-  0% {
-    display: none;
+@keyframes card-checked {
+  from {
+    margin-right: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
-  100% {
-    display: none;
+  to {
+    margin-right: 59px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+@keyframes checked-font {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes animation-menu {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -162,4 +181,59 @@ a {
   cursor: pointer;
   color: black;
   text-decoration: none;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  background: linear-gradient(to top, $colorprim, $colorsecond);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
+  padding: 15px 25px;
+  font-family: $fontmedium;
+  font-size: 1rem;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width:768px) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    opacity: 85%;
+    transform: scale(1.01);
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
+    transition: 0.5s;
+  }
+}
+
+.card-heart {
+  font-size: 1.313rem;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .custom-checkbox input[type="checkbox"],
+  .custom-checkbox .checked {
+    display: none;
+  }
+  .custom-checkbox input[type="checkbox"]:checked ~ .checked {  
+    display: inline-block;
+  } 
+  .custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
+    display: none;
+  }
+  .fa-heart {
+    cursor: pointer;
+  }
+  .fa-solid {
+    background: linear-gradient(to top, $colorprim, $colorsecond);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
