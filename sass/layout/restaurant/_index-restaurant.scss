@@ -54,24 +54,18 @@ main {
         }
 
         .card-restaurant {
+          height: 69px;
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.137);
-          border-radius: 15px;
           margin-top: 12px;
-          background-color: $green;
+          border-radius: 15px;
           display: flex;
-          align-items: center;
-          color: transparent;
-
-          &:hover {
-            animation: checked-font 0.5s ease-in-out forwards;
-          }
+          justify-content: center;
+          overflow: hidden;
             .card-content {
               font-family: $fontmedium;
               font-size: 0.95rem;
               background-color: #FFFFFF;
               padding: 15px;
-              border-radius: 15px;
-              position: relative;
               cursor: pointer;
               width: 100%;
               white-space: nowrap;
@@ -79,7 +73,9 @@ main {
               text-overflow: ellipsis;
               color: black;
               h3 {
-                padding-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
               div {
                 display: flex;
@@ -94,15 +90,27 @@ main {
                   font-weight: 600;
                 }
               }
-              &:hover {
-                animation: card-checked 0.5s ease-in-out forwards;
-              }
           }
           .card-check {
+            background-color: $green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -60px;
+            width: 59px;
+            height: 69px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transition: all 0.5s ease-in-out;
             .fa-solid {  
               font-size: 1.2rem;
-              position: absolute;
-              transform: translate(-40px, -10px);
+              color: white;
+            }
+          }
+
+          &:hover {
+            .card-check {
+              margin-right: 0;
             }
           }
         }

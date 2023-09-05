@@ -575,6 +575,7 @@ header .img-restaurant {
   padding: 0;
   position: absolute;
   z-index: -1;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   header .img-restaurant {
@@ -638,24 +639,19 @@ main .main-restaurant .menu .underline {
   background-color: #99E2D0;
 }
 main .main-restaurant .menu .card-restaurant {
+  height: 69px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.137);
-  border-radius: 15px;
   margin-top: 12px;
-  background-color: #99E2D0;
+  border-radius: 15px;
   display: flex;
-  align-items: center;
-  color: transparent;
-}
-main .main-restaurant .menu .card-restaurant:hover {
-  animation: checked-font 0.5s ease-in-out forwards;
+  justify-content: center;
+  overflow: hidden;
 }
 main .main-restaurant .menu .card-restaurant .card-content {
   font-family: roboto-medium, sans-serif;
   font-size: 0.95rem;
   background-color: #FFFFFF;
   padding: 15px;
-  border-radius: 15px;
-  position: relative;
   cursor: pointer;
   width: 100%;
   white-space: nowrap;
@@ -664,7 +660,9 @@ main .main-restaurant .menu .card-restaurant .card-content {
   color: black;
 }
 main .main-restaurant .menu .card-restaurant .card-content h3 {
-  padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .main-restaurant .menu .card-restaurant .card-content div {
   display: flex;
@@ -679,13 +677,24 @@ main .main-restaurant .menu .card-restaurant .card-content div p {
 main .main-restaurant .menu .card-restaurant .card-content div em {
   font-weight: 600;
 }
-main .main-restaurant .menu .card-restaurant .card-content:hover {
-  animation: card-checked 0.5s ease-in-out forwards;
+main .main-restaurant .menu .card-restaurant .card-check {
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -60px;
+  width: 59px;
+  height: 69px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: all 0.5s ease-in-out;
 }
 main .main-restaurant .menu .card-restaurant .card-check .fa-solid {
   font-size: 1.2rem;
-  position: absolute;
-  transform: translate(-40px, -10px);
+  color: white;
+}
+main .main-restaurant .menu .card-restaurant:hover .card-check {
+  margin-right: 0;
 }
 main .main-restaurant .menu .starters {
   animation: animation-menu 1s ease-in-out forwards;
