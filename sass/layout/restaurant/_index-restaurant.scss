@@ -72,6 +72,11 @@ main {
               overflow: hidden;
               text-overflow: ellipsis;
               color: black;
+              h3 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
               div {
                 display: flex;
                 justify-content: space-between;
