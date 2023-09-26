@@ -1,32 +1,4 @@
 // Variables
-@font-face {
-  font-family: "roboto-bold";
-  src: url(../assets/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: "roboto-light";
-  src: url(../assets/fonts/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: "roboto-medium";
-  src: url(../assets/fonts/Roboto-Medium.ttf);
-}
-@font-face {
-  font-family: "roboto-regular";
-  src: url(../assets/fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Shrikhand";
-  src: url(../assets/fonts/Shrikhand-Regular.ttf);
-}
-
-$fontbold: roboto-bold, sans-serif;
-$fontlight: roboto-light, sans-serif;
-$fontmedium: roboto-medium, sans-serif;
-$fontregular: roboto-regular, sans-serif;
-$font-shrikhand: Shrikhand, cursive;
-
 $colorbackground: #f6f6f6;
 $colorprim: #9356DC;
 $colorprim2: #F5EDFF;
@@ -39,7 +11,8 @@ $grey3: #7E7E7E;
 $timing: 3s;
 
 @mixin title {
-  font-family: $fontbold;
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 1.5rem;
   padding-top: 60px;
   padding-bottom: 24px;
@@ -175,6 +148,7 @@ $timing: 3s;
 
 body {
   background-color: white;
+  font-family: "Roboto";
 }
 
 a {
@@ -192,11 +166,13 @@ button {
   background: linear-gradient(to top, $colorprim, $colorsecond);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
   padding: 15px 25px;
-  font-family: $fontmedium;
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 1rem;
   color: white;
   border-radius: 30px;
   border: none;
+  transition: 0.7s;
   cursor: pointer;
 
   @media screen and (min-width:768px) {
@@ -207,13 +183,12 @@ button {
     opacity: 85%;
     transform: scale(1.01);
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
-    transition: 0.5s;
+    transition: 0.7s;
   }
 }
 
 .card-heart {
   font-size: 1.313rem;
-  padding-right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;

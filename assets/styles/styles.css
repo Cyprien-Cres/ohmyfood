@@ -1,23 +1,3 @@
-@font-face {
-  font-family: "roboto-bold";
-  src: url(../assets/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: "roboto-light";
-  src: url(../assets/fonts/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: "roboto-medium";
-  src: url(../assets/fonts/Roboto-Medium.ttf);
-}
-@font-face {
-  font-family: "roboto-regular";
-  src: url(../assets/fonts/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: "Shrikhand";
-  src: url(../assets/fonts/Shrikhand-Regular.ttf);
-}
 @keyframes loader {
   0% {
     width: 10%;
@@ -141,6 +121,7 @@
 
 body {
   background-color: white;
+  font-family: "Roboto";
 }
 
 a {
@@ -158,11 +139,13 @@ button {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
   padding: 15px 25px;
-  font-family: roboto-medium, sans-serif;
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 1rem;
   color: white;
   border-radius: 30px;
   border: none;
+  transition: 0.7s;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -174,12 +157,11 @@ button:hover {
   opacity: 85%;
   transform: scale(1.01);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.212);
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 .card-heart {
   font-size: 1.313rem;
-  padding-right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,14 +281,16 @@ header .location {
   font-size: 1rem;
 }
 header .location p {
-  font-family: roboto-medium, sans-serif;
+  font-family: "Roboto";
+  font-weight: 500;
   color: #353535;
 }
 header .location .fa-solid {
   padding-right: 15px;
 }
 header h1 {
-  font-family: roboto-bold, sans-serif;
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 1.5rem;
   padding-top: 60px;
   padding-bottom: 24px;
@@ -318,7 +302,8 @@ header h1 {
   }
 }
 header p {
-  font-family: roboto-light, sans-serif;
+  font-family: "Roboto";
+  font-weight: 300;
   font-size: 1.125rem;
   padding: 0 30px;
 }
@@ -331,7 +316,8 @@ main {
   margin: 0 auto;
 }
 main h2 {
-  font-family: roboto-bold, sans-serif;
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 1.5rem;
   padding-top: 60px;
   padding-bottom: 24px;
@@ -372,7 +358,8 @@ main .fonctionnement div p {
   margin-bottom: 25px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  font-family: roboto-medium, sans-serif;
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 1rem;
   color: black;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.212);
@@ -458,6 +445,7 @@ main .restaurants .group-card .card {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 18px;
+  position: relative;
 }
 main .restaurants .group-card .card .card-img {
   position: relative;
@@ -473,33 +461,38 @@ main .restaurants .group-card .card .card-img p {
   position: absolute;
   background-color: #99E2D0;
   color: #008766;
-  font-family: roboto-medium, sans-serif;
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 0.875rem;
   padding: 7px 12px;
   border-radius: 3px;
   top: 5%;
   right: 3%;
 }
-main .restaurants .group-card .card .card-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px 15px 14px;
+main .restaurants .group-card .card .card-txt {
+  padding: 15px 25px 15px 20px;
 }
-main .restaurants .group-card .card .card-content h3 {
-  font-family: roboto-bold, sans-serif;
+main .restaurants .group-card .card .card-txt h3 {
+  font-family: "Roboto";
+  font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 5px;
 }
-main .restaurants .group-card .card .card-content p {
+main .restaurants .group-card .card .card-txt p {
   font-size: 1.063rem;
-  font-family: roboto-light, sans-serif;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+main .restaurants .group-card .card .card-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
 }
 
 footer {
   padding: 25px;
-  font-family: roboto-regular, sans-serif;
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 1rem;
   background-color: #353535;
   color: white;
@@ -543,6 +536,10 @@ footer nav ul li {
 footer nav ul li .fa-solid {
   margin-right: 12px;
   height: 13px;
+}
+footer nav ul li a {
+  font-size: 1rem;
+  color: white;
 }
 @media screen and (min-width: 768px) {
   footer nav ul li {
@@ -602,7 +599,8 @@ main .main-restaurant {
 main .main-restaurant .title {
   display: flex;
   justify-content: space-between;
-  font-family: Shrikhand, cursive;
+  font-family: "Shrikhand";
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   main .main-restaurant .title {
@@ -628,7 +626,7 @@ main .main-restaurant .title h1 em {
   }
 }
 main .main-restaurant .menu h2 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   padding-bottom: 0px;
 }
@@ -648,7 +646,8 @@ main .main-restaurant .menu .card-restaurant {
   overflow: hidden;
 }
 main .main-restaurant .menu .card-restaurant .card-content {
-  font-family: roboto-medium, sans-serif;
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 0.95rem;
   background-color: #FFFFFF;
   padding: 15px;
@@ -673,6 +672,8 @@ main .main-restaurant .menu .card-restaurant .card-content div p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: "Roboto";
+  font-weight: 300;
 }
 main .main-restaurant .menu .card-restaurant .card-content div em {
   font-weight: 600;

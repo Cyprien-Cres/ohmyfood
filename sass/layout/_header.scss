@@ -32,7 +32,8 @@ header {
     padding: 20px 0px;
     font-size: 1rem;
     p {
-      font-family: $fontmedium;
+      font-family: "Roboto";
+      font-weight: 500;
       color: $grey;
     }
     .fa-solid {
@@ -48,7 +49,8 @@ header {
     }
   }
   p {
-    font-family: $fontlight;
+    font-family: "Roboto";
+    font-weight: 300;
     font-size: 1.125rem;
     padding: 0 30px;
   }

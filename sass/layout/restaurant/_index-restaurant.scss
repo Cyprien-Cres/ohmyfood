@@ -16,7 +16,8 @@ main {
       .title {
         display: flex;
         justify-content: space-between;
-        font-family: $font-shrikhand;
+        font-family: "Shrikhand";
+        font-weight: 400;
 
         @media screen and (min-width:768px){
           justify-content: center;
@@ -42,7 +43,7 @@ main {
         }
 
         h2 {
-          font-weight: 400;
+          font-weight: 300;
           font-size: 1rem;
           padding-bottom: 0px;
         }
@@ -62,7 +63,8 @@ main {
           justify-content: center;
           overflow: hidden;
             .card-content {
-              font-family: $fontmedium;
+              font-family: "Roboto";
+              font-weight: 500;
               font-size: 0.95rem;
               background-color: #FFFFFF;
               padding: 15px;
@@ -85,6 +87,8 @@ main {
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
+                  font-family: "Roboto";
+                  font-weight: 300;
                 }
                 em {
                   font-weight: 600;
