@@ -677,6 +677,7 @@ main .main-restaurant .menu .card-restaurant .card-content div p {
 }
 main .main-restaurant .menu .card-restaurant .card-content div em {
   font-weight: 600;
+  font-style: normal;
 }
 main .main-restaurant .menu .card-restaurant .card-check {
   background-color: #99E2D0;
